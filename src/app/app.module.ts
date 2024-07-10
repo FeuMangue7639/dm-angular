@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms'; // Importation de FormsModule
 
 @NgModule({
   declarations: [

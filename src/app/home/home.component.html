@@ -1,1 +1,16 @@
-<p>home works!</p>
+<h1>Bienvenue chez [Nom de l'entreprise]</h1>
+<p>Une courte présentation de l’entreprise.</p>
+
+<h2>Catalogue des produits</h2>
+<input type="text" placeholder="Rechercher par nom" [(ngModel)]="searchTerm">
+<button (click)="sortByPrice('asc')">Prix croissant</button>
+<button (click)="sortByPrice('desc')">Prix décroissant</button>
+
+<div *ngFor="let product of filteredProducts()">
+  <a [routerLink]="['/product', product.id]">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.price }} €</p>
+    <img [src]="product.image" alt="{{ product.name }}">
+  </a>
+</div>
+
