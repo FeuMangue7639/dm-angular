@@ -7,69 +7,128 @@
     min-height: calc(100vh - 100px); /* Ajuster pour ne pas coller au footer */
     padding: 1em;
     box-sizing: border-box;
-  }
-  
-  /* Style du formulaire */
-  form {
+    background-color: #ffffff; /* Couleur de fond douce */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #DA001E; /* Couleur du texte principale */
+    margin-bottom: 0.5em;
+    text-align: center;
+    animation: fadeInDown 1s;
+}
+
+p {
+    font-size: 1.2em;
+    color: #151217; /* Couleur du texte principale */
+    text-align: center;
+    margin-bottom: 2em;
+    animation: fadeIn 2s;
+}
+
+/* Style du formulaire */
+form {
     width: 100%;
     max-width: 600px;
     padding: 2em;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #F9D0A3; /* Fond blanc */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Groupes de formulaires */
-  .form-group {
+    animation: fadeInUp 1s;
+}
+
+/* Groupes de formulaires */
+.form-group {
     margin-bottom: 1em;
-  }
-  
-  /* Labels des champs */
-  label {
+}
+
+/* Labels des champs */
+label {
     display: block;
     margin-bottom: 0.5em;
     font-weight: bold;
-  }
-  
-  /* Champs de saisie et zone de texte */
-  input, textarea {
+    color: #151217; /* Couleur du texte principale */
+}
+
+/* Champs de saisie et zone de texte */
+input, textarea {
     width: 100%;
     padding: 0.75em;
     font-size: 1em;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
-  }
-  
-  /* Bouton de soumission */
-  button {
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #DA001E; /* Couleur d'accentuation */
+    outline: none;
+}
+
+/* Bouton de soumission */
+button {
     display: inline-block;
     padding: 0.75em 1.5em;
     font-size: 1em;
     color: #fff;
-    background-color: #007bff;
+    background-color: #DA001E; /* Couleur du bouton */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  /* Bouton de soumission désactivé */
-  button:disabled {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Bouton de soumission désactivé */
+button:disabled {
     background-color: #aaa;
-  }
-  
-  /* Effet de survol sur le bouton */
-  button:hover:not(:disabled) {
-    background-color: #0056b3;
-  }
-  
-  /* Style des messages d'erreur */
-  .error {
-    color: red;
+}
+
+/* Effet de survol sur le bouton */
+button:hover:not(:disabled) {
+    background-color: #FDD90B; /* Couleur au survol */
+    transform: scale(1.05);
+    color: #151217; /* Texte noir au survol */
+}
+
+/* Style des messages d'erreur */
+.error {
+    color: #DA001E; /* Couleur des messages d'erreur */
     font-size: 0.9em;
     margin-top: 0.5em;
-  }
+}
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
   
   
