@@ -1,0 +1,132 @@
+.home-container {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    animation: fadeInDown 1s;
+  }
+  
+  p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 2em;
+    animation: fadeIn 2s;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+  }
+  
+  .search-sort-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .search-input:focus {
+    border-color: #333;
+    outline: none;
+  }
+  
+  .sort-buttons {
+    display: flex;
+    gap: 1em;
+  }
+  
+  .sort-button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .sort-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2em;
+  }
+  
+  .product-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .product-link h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .product-link p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .product-link img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .product-link img:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

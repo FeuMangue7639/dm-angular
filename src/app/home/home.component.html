@@ -1,16 +1,25 @@
-<h1>Bienvenue chez [Nom de l'entreprise]</h1>
-<p>Une courte présentation de l’entreprise.</p>
+<div class="home-container">
+  <h1>Bienvenue chez Au petit village</h1>
+  <p>Au petit village est une entreprise spécialisé dans la vente de figurines faites main, inspirées d’Astérix & Obélix, capturant l'esprit et l'humour des célèbres personnages de bande dessinée..</p>
 
-<h2>Catalogue des produits</h2>
-<input type="text" placeholder="Rechercher par nom" [(ngModel)]="searchTerm">
-<button (click)="sortByPrice('asc')">Prix croissant</button>
-<button (click)="sortByPrice('desc')">Prix décroissant</button>
+  <h2>Catalogue des produits</h2>
+  <div class="search-sort-container">
+    <input type="text" placeholder="Rechercher par nom" [(ngModel)]="searchTerm" class="search-input">
+    <div class="sort-buttons">
+      <button (click)="sortByPrice('asc')" class="sort-button">Prix croissant</button>
+      <button (click)="sortByPrice('desc')" class="sort-button">Prix décroissant</button>
+    </div>
+  </div>
 
-<div *ngFor="let product of filteredProducts()">
-  <a [routerLink]="['/product', product.id]">
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.price }} €</p>
-    <img [src]="product.image" alt="{{ product.name }}">
-  </a>
+  <div class="product-list">
+    <div *ngFor="let product of filteredProducts()" class="product-item">
+      <a [routerLink]="['/product', product.id]" class="product-link">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }} €</p>
+        <img [src]="product.image" alt="{{ product.name }}">
+      </a>
+    </div>
+  </div>
 </div>
+
 

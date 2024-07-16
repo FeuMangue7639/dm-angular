@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
+import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component'; // Import du composant Contact
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'product/:id', component: ProductComponent },
   { path: 'about', component: AboutComponent },
-  { path: '**', redirectTo: '' }
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'contact', component: ContactComponent }, // Ajout de la route contact
 ];
 
 @NgModule({
@@ -16,4 +17,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 
