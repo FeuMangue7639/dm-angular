@@ -15,7 +15,7 @@
     <div *ngFor="let product of filteredProducts()" class="product-item">
       <a [routerLink]="['/product', product.id]" class="product-link">
         <h3>{{ product.name }}</h3>
-        <p>{{ product.price }} €</p>
+        <p class="numbers">{{ product.price }} €</p>
         <img [src]="product.image" alt="{{ product.name }}">
       </a>
     </div>
